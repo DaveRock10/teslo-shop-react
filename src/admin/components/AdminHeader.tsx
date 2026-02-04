@@ -1,12 +1,12 @@
 import React, { useRef, type KeyboardEvent } from "react";
 import { Search, Bell, MessageSquare, Settings } from "lucide-react";
 import { useAuthStore } from "@/auth/store/auth.store";
-import { useSearchParams, useParams } from "react-router";
+import { useSearchParams } from "react-router";
 
 export const AdminHeader: React.FC = () => {
   const { user } = useAuthStore();
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
 
   const inputRef = useRef<HTMLInputElement>(null);
 
